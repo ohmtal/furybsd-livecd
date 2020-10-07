@@ -107,7 +107,17 @@ chroot "${FSMNT}" pw lock root # FIXME: With this, sudo su does not work
 # Add regular user
 # Ask for username and/or password in case the graphical installer frontend did not supply them
 echo "Creating user account"
-if [ -n "${INSTALLER_USERNAME}" ] ; then
+
+# This is here for debugging reasons, can be commented out/removed once we know it is working properly
+if [ -z ${INSTALLER_USER_PASSWORD+x} ] ; then 
+  echo "INSTALLER_USER_PASSWORD environment variable is not available"
+elif [ -z ${INSTALLER_USER_PASSWORD} ] ; then
+  echo "INSTALLER_USER_PASSWORD environment variable is available but is blank"
+else
+  echo "INSTALLER_USER_PASSWORD environment variable is available and is not blank"
+fi
+
+if [ ! -z ${INSTALLER_USER_PASSWORD+x} ] ; then
   username="${INSTALLER_USERNAME}"
   password="${INSTALLER_USER_PASSWORD}"
   echo "${username}:::::::::${password}" | chroot "${FSMNT}" adduser -f - && \
