@@ -201,7 +201,8 @@ class InstallWizard(QtWidgets.QWizard, object):
 
     def playSound(self):
         print("Playing sound")
-        soundfile = os.path.dirname(__file__) + '/success.ogg' # https://freesound.org/people/Leszek_Szary/sounds/171670/, licensed under CC0
+        # soundfile = os.path.dirname(__file__) + '/success.ogg' # https://freesound.org/people/Leszek_Szary/sounds/171670/, licensed under CC0
+        soundfile = "/usr/local/share/sounds/freedesktop/stereo/complete.oga" # pkg install freedesktop-sound-theme
         proc = QtCore.QProcess()
         command = 'ogg123'
         args = ['-q', soundfile]
