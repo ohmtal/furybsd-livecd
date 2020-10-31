@@ -1,19 +1,18 @@
-# furybsd-livecd [![Build Status](https://api.cirrus-ci.com/github/furybsd/furybsd-livecd.svg)](https://cirrus-ci.com/github/furybsd/furybsd-livecd)
-
 LiveCD builder for FuryBSD
 
-## Continuous builds
+Last updated 10/31/2020
 
-Continuous builds can be downloaded [here](../../releases/continuous/). __CAUTION:__ These are meant for development only. Use at your own risk. Do not use in production environments.
+## End-of-life notice for community ISO images
+Thank you for your interest in FuryBSD.  This project has been discontinued.  Plans to publish Q4 2020 images have been cancelled.
 
-To minimize the amount of data when going from build to build, `.zsync` files are also provided. [More information](https://askubuntu.com/questions/54241/how-do-i-update-an-iso-with-zsync)
+## What happened to the community telegram, blog, website, and forums?
+On 10/30/2020 the telegram channel was comprimised which accelerated the decision to terminate these resources sooner.  Protecting the forums even with the assistance of volenteers from spam has been an uphill battle over the last year.  Those volenteers have moved on from the project.  Simiarly the original volenteer who helped create and maintain wordpress has moved on from the project.  This added overhead, and decrease in volenteers is the primary reason for the decision.  
 
-It is also possible to directly download and write straight to a USB stick in one go. __Caution:__ This will OVERWRITE the entire contents of the USB stick.
+## What to do if you have installed using the live media?
+If you have installed using the live media you can continue [updating and upgrading FreeBSD](https://www.freebsd.org/doc/handbook/updating-upgrading.html), and there is no need for a migration of your installed system.  
 
-```
-root@FreeBSD:/ # umount /dev/daX*
-root@FreeBSD:/ # curl -L "https://github.com/probonopd/furybsd-livecd/releases/download/continuous/FuryBSD-12.1-XFCE.iso" | dd of=/dev/daX bs=4m
-```
+## What to do for updated versions of the LiveCD?
+If you enjoyed using the LiveCD please see projects which succeed it such as [GhostBSD](http://www.ghostbsd.org).  
 
 ## System Requirements for building LiveCD
 
