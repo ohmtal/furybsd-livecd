@@ -3,7 +3,7 @@
 # Exit on errors
 set -e
 
-version="12.1"
+version="12.2"
 pkgset="branches/2020Q1" # TODO: Use it
 desktop=$1
 tag=$2
@@ -248,17 +248,29 @@ image()
   md5 "${isopath}" > "${isopath}.md5"
   echo "$isopath created"
 }
-
+echo "1 CLEANUP"
 cleanup
+echo "2 WORKSPACE"
 workspace
+echo "3 REPOS"
 repos
+echo "4 PKG"
 pkg
+echo "5 BASE"
 base
+echo "6 PACKAGES"
 packages
+echo "7 RC"
 rc
+echo "8 USER"
 user
+echo "9 DM"
 dm
+echo "10 UZIP"
 uzip
+echo "11 RAMDISK"
 ramdisk
+echo "12 BOOT"
 boot
+echo "13 IMAGE"
 image
