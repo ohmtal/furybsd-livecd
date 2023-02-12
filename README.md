@@ -1,3 +1,7 @@
+Updated to 12.2 by XXTH at 2021-05-26
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 LiveCD builder for FuryBSD
 
 Last updated 10/31/2020
